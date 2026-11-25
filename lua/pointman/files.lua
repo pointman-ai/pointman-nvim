@@ -80,7 +80,7 @@ function M.send()
     api.call("send", { review = r.id }, function(res, err)
       if res and res.review then
         store.put(res.review)
-        notify(string.format("sent to #%s (post %s)", tostring(r.thread), tostring(res.post)))
+        notify(string.format("sent to #%s (post %s)", tostring(r.channel), tostring(res.post)))
       elseif err then
         notify(err.message or "it failed", vim.log.levels.WARN)
       end
