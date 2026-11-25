@@ -80,7 +80,7 @@ node instead of herdr. The review itself lives on the node, kept by Pointman's `
 **In any file under review**, as neo-herdr's: `<leader>hc` comments on the line or selection, `<leader>hs` sends.
 Each conversation also shows under its line of the file.
 
-Nothing reaches the agent until you send. A send from Neovim posts in the review's thread as your machine, naming you.
+Nothing reaches the agent until you send. A send from Neovim posts in the review's channel as your machine, naming you.
 Agents never type in Neovim or touch its buffers: they change code in their own copy, and each change comes as a round.
 
 ## Setup (defaults)

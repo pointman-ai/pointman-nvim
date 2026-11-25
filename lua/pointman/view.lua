@@ -108,7 +108,7 @@ local function render_tree(r)
   end
   add(" " .. (r.title or r.id), "PointmanTitle")
   add("  " .. source_words(r), "PointmanDim")
-  local where = "  #" .. tostring(r.thread or "?") .. (r.agent and (" · @" .. r.agent) or "")
+  local where = "  #" .. tostring(r.channel or "?") .. (r.agent and (" · @" .. r.agent) or "")
   if (r.waiting or 0) > 0 then
     where = where .. " · " .. r.waiting .. " to send (s)"
   end
@@ -514,7 +514,7 @@ function M.send()
   end
   act("send", {}, function(res)
     if res and res.post then
-      notify(string.format("sent to #%s (post %s)", tostring(r.thread), tostring(res.post)))
+      notify(string.format("sent to #%s (post %s)", tostring(r.channel), tostring(res.post)))
     end
   end)
 end
